@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Supplementary Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Generated or Not?</h1>
+        <p>Exploring the Distinction Between AI-Generated and Human-Composed Music</p>
+    </header>
+
+    <nav>
+        <a href="#introduction">Introduction</a>
+        <a href="#examples">Musical Examples</a>
+        <a href="#methods">Methods</a>
+        <a href="#class-survey">Results from Class Study</a>
+        <a href="#conclusion">Conclusion</a>
+    </nav>
+
+    <main>
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>This project investigates the ability to predict whether a piece of music is AI-generated or human-composed Our analysis aims to identify key features that differentiate these compositions and explore how AI can impact the sound of music.</p>
+        </section>
+
+        <section id="examples">
+            <h2>Musical Examples</h2>
+            <p>Below are some examples of AI-generated and human-composed music from the datasets we are using that illustrate the problem we are solving:</p>
+            <div class="audio-container">
+                <div class="audio-item">
+                    <h3>AIME: AI-Generated Samples</h3>
+                    <audio controls>
+                        <source src="audio/ai_generated/AIME_001.wav" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <audio controls>
+                        <source src="audio/ai_generated/AIME_002.wav" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <audio controls>
+                        <source src="audio/ai_generated/AIME_003.wav" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <audio controls>
+                        <source src="audio/ai_generated/AIME_004.wav" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <div class="audio-item">
+                    <h3>Music Caps: Human-Composed Samples</h3>
+                    <audio controls>
+                        <source src="audio/human_composed/MusicCaps_001.wav" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <audio controls>
+                        <source src="audio/ai_generated/AIME_002.wav" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <audio controls>
+                        <source src="audio/ai_generated/AIME_003.wav" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <audio controls>
+                        <source src="audio/ai_generated/AIME_004.wav" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </div>
+        </section>
+
+        <section id="methods">
+            <h2>Methods</h2>
+            <div class="figure-container">
+                <div class="figure-item">
+                    <h3>Figure 1: PCA Visualization of Embeddings</h3>
+                    <img src="images/embeddings_figures/PCA_embeddings.png" alt="PCA Visualization">
+                </div>
+                <div class="figure-item">
+                    <h3>Figure 2: t-SNE Visualization of Embeddings</h3>
+                    <img src="images/embeddings_figures/t-SNE_embeddings.png" alt="t-SNE Visualization">
+                </div>
+            </div>
+            <p>Our preliminary analysis of the generated embeddings reveals the following insights:</p>
+            <ul>
+                <li><b>Clustering Patterns:</b> Both PCA and t-SNE visualizations show distinct regions, suggesting potential grouping of embeddings based on musical characteristics or metadata (e.g., genre or human vs. AI-generated labels).
+</li>
+                <li><b>Separation in t-SNE:</b> The t-SNE plot highlights better local relationships, indicating that embeddings capture nuanced features effectively, making it suitable for identifying similar audio samples.
+</li>
+                <li><b>Outlier Detection:</b> Sparse points in the plots may correspond to outliers or unique embeddings, potentially representing uncommon musical patterns or anomalies in the dataset.
+</li>
+                <li><b>Next Steps:</b> Incorporating metadata (e.g., genres, repetition scores) as color-coded labels could reveal additional patterns and validate how well embeddings align with these attributes.
+</li>
+            </ul>
+        </section>
+
+        <section id="class-survey">
+            <h2>Results from the Class Survey</h2>
+            <div class="figure-container">
+                <div class="figure-item">
+                    <h3>Figure 3: Media Lab Study Audio</h3>
+                    <img src="images/class_study/ML_Audio_Pilot.png" alt="Media Lab Study Audio">
+                </div>
+                <div class="figure-item">
+                    <h3>Figure 4: Dataset Audio</h3>
+                    <img src="images/class_study/Dataset_Audio_Pilot.png" alt="Dataset Audio">
+                </div>
+            </div>
+            <p>Our preliminary analysis of the class survey reveals the following insights:</p>
+            <ul>
+                <li>AI-generated music tends to have more repetitive patterns.</li>
+                <li>Human-composed music demonstrates greater adherence to themes and more emotion.</li>
+                <li>Listeners rated AI-generated music as "very generic."</li>
+            </ul>
+            <p>Our findings show that there is a struggle to distinguish between the pieces and we will further investigate the results as well as potentially run another larger scale study to learn more.</p>
+        </section>
+
+        <section id="conclusion">
+            <h2>Conclusion</h2>
+            <p>Our findings highlight the potential for AI-generated music to evolve with more nuanced training. Future work will refine these models and incorporate deeper listener feedback.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Fall 2024 Ananya Kulshrestha and Kimaya Lecamwasam | Contact: <a href="mailto:ananya_k@mit.edu">ananya_k@mit.edu</a> and <a href="mailto:klecamwa@mit.edu">klecamwa@mit.edu</a></p>
+    </footer>
+</body>
+</html>
+
