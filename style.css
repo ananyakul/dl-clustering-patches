@@ -84,7 +84,7 @@ ul, ol {
 /* Grid Container for Example Images */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Fixed 4 columns */
+    grid-template-columns: repeat(3, 1fr); /* Fixed 4 columns */
     gap: 2rem; /* Consistent spacing between items */
     justify-items: center;
     align-items: center;
@@ -93,7 +93,7 @@ ul, ol {
 
 .grid-item {
     text-align: center;
-    max-width: 300px; /* Consistent size for grid items */
+    max-width: 250px; /* Consistent size for grid items */
 }
 
 .grid-item img {
@@ -101,12 +101,12 @@ ul, ol {
     height: 250px;
     object-fit: cover; /* Ensures images fit within their box */
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .label {
     margin-top: 0.5rem;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: bold;
     color: #333;
 }
