@@ -246,6 +246,9 @@
                    We analyze the classification accuracy of our model across three clustering methods (K-means, spectral, and agglomerative) and three cluster sizes (2, 4, and 8). We evaluate the classification accuracies of our models on the AffectNet test set. We also evaluate the time complexity of each clustering method to better understand the tradeoff between accuracy and computational costs.
                 </p>
             </section>
+
+        <section>
+            <h3 class="subheading">Results</h3>
             <table class="results-table">
                 <thead>
                     <tr>
@@ -276,10 +279,6 @@
                     </tr>
                 </tbody>
             </table>
-        </section>
-
-        <section>
-            <h3 class="subheading">Results</h3>
             <p>
                Our results reveal significant differences in performance among the clustering methods across cluster sizes (k). At k=2, Spectral Clustering performed the best, likely due to its ability to capture non-linear relationships. At k=4, Agglomerative Clustering achieved the highest accuracy, possibly because its hierarchical nature allows it to merge smaller, similar clusters into larger, meaningful groupings that align well with moderate granularity. At k=8, K-Means improved slightly, while Spectral Clustering and Agglomerative Clustering both dropped, probably due to creating overly fragmented groupings that lacked coherence. Overall, Spectral Clustering showed strong performance at lower cluster sizes, Agglomerative Clustering excelled at moderate clusters, and K-Means displayed consistent, albeit lower, performance across all configurations. These results highlight the importance of choosing the right clustering method and cluster size for optimizing accuracy.
             </p>
