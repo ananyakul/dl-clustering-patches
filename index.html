@@ -203,27 +203,29 @@
             </div>
         </div>
     </section>
-        
-        <section id="experiments">
-            <h2>Clustering Comparison Table</h2>
-            <section>
-                <h3 class="subheading">Experimental Setup</h3>
+
+            <section id="model-training">
+                <h2>Model Training</h2>
                 <ul>
                     <li>
-                        <strong>Cluster Sizes:</strong> For each clustering method (K-means, spectral clustering, and agglomerative clustering), we test three cluster sizes: 2, 4, and 8. 
-                        The choice of cluster size balances interpretability and computational efficiency.
+                        <strong>Dataset and Preprocessing:</strong> The dataset is split into training and testing sets, with <strong>80%</strong> of the data used for training and <strong>20%</strong> for testing.
                     </li>
                     <li>
-                        <strong>Training and Testing:</strong> The generated embeddings are clustered using each method, and cluster centroids are fed into the patch-to-cluster attention module. 
-                        The model is trained to classify the facial images into one of eight emotion categories, using AffectNet's labeled data for supervised learning. A validation set is used to monitor overfitting and tune hyperparameters.
+                        <strong>Training Setup:</strong> We train our model with the Adam optimizer using a learning rate of <strong>1e-3</strong>, <strong>CrossEntropyLoss</strong>, a depth of <strong>6</strong>, and <strong>30 epochs</strong> of training.
                     </li>
                     <li>
-                        <strong>Evaluation Metrics:</strong> Classification accuracy on the AffectNet test set.
+                        <strong>Device:</strong> Model training is done on <strong>Google Colab A100 GPU</strong>.
                     </li>
                 </ul>
+            </section>
+
+        
+        <section id="experiments">
+            <h2>Experiments and Results</h2>
+            <section>
+                <h3 class="subheading">Experimental Setup</h3>
                 <p>
-                    By systematically varying cluster sizes and clustering methods, we aim to identify configurations that maximize recognition accuracy 
-                    while providing interpretable insights into the role of clusters in emotion recognition.
+                   We analyze the classification accuracy of our model across three clustering methods (K-means, spectral, and agglomerative) and three cluster sizes (2, 4, and 8). We evaluate the classification accuracies of our models on the AffectNet test set. We also evaluate the time complexity of each clustering method to better understand the tradeoff between accuracy and computational costs.
                 </p>
             </section>
             <table class="results-table">
