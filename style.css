@@ -47,7 +47,7 @@ nav a:hover {
 
 /* Main Container */
 main {
-    width: 85%; /* Main container width */
+    width: 70%; /* Main container width */
     max-width: 1200px; /* Restrict maximum width */
     margin: 2rem auto; /* Center main content */
     padding: 1.5rem;
