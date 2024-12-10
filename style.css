@@ -238,31 +238,34 @@ footer a {
 .example-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* Four columns */
-    gap: 1.5rem; /* Smaller gaps between items */
-    justify-content: center; /* Center the grid content */
-    margin: 2rem auto; /* Add vertical spacing and center the grid */
-    max-width: 1400px; /* Ensure grid fits within a wider container */
+    gap: 2rem; /* Space between items */
+    justify-content: center; /* Center the grid content horizontally */
+    align-items: center; /* Center items vertically */
+    margin: 2rem auto; /* Add vertical spacing and center the grid on the page */
+    max-width: 80%; /* Restrict the container width */
+    padding: 0; /* Remove any extra padding */
+    text-align: center; /* Center the text inside grid items */
 }
 
 .example-grid .grid-item {
     text-align: center;
-    width: 200px; /* Increase item width for larger images */
 }
 
 .example-grid .grid-item img {
-    width: 100%; /* Ensure images fill the item width */
+    display: block; /* Ensure images are treated as block-level elements */
+    margin: 0 auto; /* Center the image horizontally */
+    max-width: 100%; /* Ensure images fit within their containers */
     height: auto; /* Maintain aspect ratio */
     border-radius: 8px; /* Rounded corners for the images */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for polish */
 }
 
 .example-grid .grid-item .label {
-    margin-top: 0.5rem; /* Space between image and label */
-    font-size: 1.3rem; /* Slightly larger label font size */
+    margin-top: 0.5rem; /* Space between the image and label */
+    font-size: 1.2rem; /* Slightly larger label font size */
     font-weight: bold;
     color: #333; /* Neutral text color */
 }
-
 
 /* Responsive Design */
 @media (max-width: 768px) {
