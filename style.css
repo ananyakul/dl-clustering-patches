@@ -85,7 +85,7 @@ ul, ol {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* Fixed 4 columns */
-    gap: 2rem; /* Consistent spacing between items */
+    gap: 1rem; /* Consistent spacing between items */
     justify-items: center;
     align-items: center;
     margin: 2rem 0;
