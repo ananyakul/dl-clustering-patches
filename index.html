@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>6.7960 Final Project Fall 2024</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
     <header>
@@ -147,7 +148,11 @@
         </p>
         <ul>
             <li><strong>Query, Key, and Value Projections:</strong> Patch embeddings are projected into query vectors (Q) using a linear layer. Cluster centroids, computed via a clustering algorithm, are projected into key (K) and value (V) vectors. These projections are used to calculate the relationships between patches and clusters.</li>
-            <li><strong>Attention Computation:</strong> Attention scores are computed using a scaled dot-product where N is the number of patches, C is the embedding dimensionality, and M is the number of clusters.</li>
+            <li><strong>Attention Computation:</strong> Attention scores are computed using a scaled dot-product where N is the number of patches, C is the embedding dimensionality, and M is the number of clusters.
+                \[
+                    A_{N,M} = \text{Softmax}\left( \frac{Q_{N,C} \cdot K_{M,C}^T}{\sqrt{C}} \right)_{\text{dim}=1}
+                \]
+            </li>
             <li><strong>Weighted Aggregation:</strong> The attention scores weigh the cluster value vectors (V). This step integrates global cluster-level information into the patch representations.</li>
             <li><strong>Output:</strong> The aggregated patch representations are transformed via a linear output projection to produce the final enhanced patch embeddings.</li>
         </ul>
