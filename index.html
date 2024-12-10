@@ -260,6 +260,16 @@
             </table>
         </section>
 
+        <section>
+            <h3 class="subheading">Results</h3>
+            <p>
+               Our results reveal significant differences in performance among the clustering methods across cluster sizes (k). At k=2, Spectral Clustering performed the best, likely due to its ability to capture non-linear relationships. At k=4, Agglomerative Clustering achieved the highest accuracy, possibly because its hierarchical nature allows it to merge smaller, similar clusters into larger, meaningful groupings that align well with moderate granularity. At k=8, K-Means improved slightly, while Spectral Clustering and Agglomerative Clustering both dropped, probably due to creating overly fragmented groupings that lacked coherence. Overall, Spectral Clustering showed strong performance at lower cluster sizes, Agglomerative Clustering excelled at moderate clusters, and K-Means displayed consistent, albeit lower, performance across all configurations. These results highlight the importance of choosing the right clustering method and cluster size for optimizing accuracy.
+            </p>
+            <p>
+                The runtime comparison of the clustering methods reveals notable differences in computational efficiency. Agglomerative clustering was the fastest, with K-Means close behind. Spectral clustering, however, was extremely computationally expensive. Spectral Clustering, while effective at capturing non-linear relationships, is significantly slower than the other methods, which could be a bottleneck for larger datasets or real-time applications. Agglomerative Clustering seems to demonstrate the best balance between accuracy and runtime at k = 4, making it a strong choice for tasks prioritizing speed and hierarchical insights. K-Means remains a good middle-ground option, offering moderate runtime and competitive accuracy, particularly as the number of clusters increases.
+            </p>
+        </section>
+
         <section id="conclusion">
             <h2>Conclusion and Future Works</h2>
             <p>
