@@ -180,3 +180,13 @@ table {
     border-radius: 8px; /* Adds rounded corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds shadow for polish */
 }
+
+
+/* Subheading Styling */
+.subheading {
+    color: #0056b3; /* Blue color for subheadings */
+    font-size: 1.5rem;
+    margin-top: 2rem; /* Adds space above the subheading */
+    margin-bottom: 0.8rem; /* Adds space below the subheading */
+    text-decoration: underline; /* Optional: underlines the subheading */
+}
