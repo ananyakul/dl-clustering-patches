@@ -261,8 +261,24 @@
         </section>
 
         <section id="conclusion">
-            <h2>Conclusion and Future Work</h2>
-            <p>Our findings highlight the potential for AI-generated music to evolve with more nuanced training. Future work will refine these models and incorporate deeper listener feedback.</p>
+            <h2>Conclusion and Future Works</h2>
+            <p>
+                In this project, we explored multiple clustering techniques—<strong>KMeans</strong>, <strong>Agglomerative Clustering</strong>, and <strong>Spectral Clustering</strong>—to evaluate their performance and efficiency in the context of patch-based emotion recognition. Our results highlighted the trade-offs between clustering quality and computational efficiency. While Agglomerative Clustering demonstrated the best runtime performance, KMeans and Spectral Clustering offered better accuracy under certain conditions.
+            </p>
+            <p>
+                We initially considered using <strong>Gaussian Mixture Models (GMMs)</strong> due to their probabilistic approach to clustering, which assumes embeddings are drawn from a mixture of Gaussian distributions. The Expectation-Maximization (EM) algorithm, a core component of GMMs, provides a powerful mechanism to estimate cluster parameters. However, due to time constraints and the computational complexity of GMMs when applied to large datasets like ours, we chose to omit this method from our final implementation. Future exploration into GMMs, particularly with optimized frameworks or smaller subsets of embeddings, may reveal their potential in capturing subtle patterns in the data.
+            </p>
+        
+            <h3>Future Directions</h3>
+            <ul>
+                <li><strong>Exploration of GMMs:</strong> Investigating the viability of GMMs using optimized algorithms or smaller embedding subsets to mitigate computational costs.</li>
+                <li><strong>Scalability:</strong> Extending the framework to larger datasets and evaluating how clustering performance scales with increasing data size.</li>
+                <li><strong>Multi-Modal Extensions:</strong> Combining visual embeddings with other modalities, such as audio or text, to enhance the emotion recognition pipeline.</li>
+                <li><strong>Cluster Interpretability:</strong> Developing methods to better visualize and interpret clusters, which could provide insights into model behavior and potential biases.</li>
+            </ul>
+            <p>
+                This work establishes a strong foundation for leveraging clustering methods in vision tasks, with room to integrate advanced clustering techniques and additional modalities in future studies.
+            </p>
         </section>
 
         <section id="references">
