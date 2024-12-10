@@ -191,15 +191,29 @@ footer a {
     text-decoration: underline;
 }
 
-/* General Figure Container Styling */
 .figure-container {
     display: flex;
-    justify-content: center; /* Center the figure horizontally */
-    align-items: center; /* Align content vertically in the center */
-    flex-direction: column; /* Stack items vertically */
-    margin: 2rem auto; /* Add space above and below the figure */
-    max-width: 100%; /* Restrict container width */
-    text-align: center; /* Center-align text inside the container */
+    justify-content: center; /* Center the figure */
+    align-items: center;
+    flex-direction: column; /* Stack the figure and caption */
+    margin: 2rem auto; /* Add vertical spacing */
+    max-width: 100%; /* Allow the container to span the full width if needed */
+    text-align: center; /* Center-align the caption text */
+}
+
+.figure-container img {
+    width: 90%; /* Adjust the width to make the image larger */
+    max-width: 1200px; /* Restrict the maximum width */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 8px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for polish */
+}
+
+.figure-container .figure-caption {
+    margin-top: 1rem; /* Space between the image and caption */
+    font-size: 1.2rem; /* Caption font size */
+    font-weight: bold;
+    color: #333; /* Neutral text color */
 }
 
 /* Individual Figure Styling */
