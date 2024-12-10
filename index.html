@@ -124,6 +124,73 @@
                 </div>
             </div>
             <section>
+        <h3 class="subheading">Embedding Generation</h3>
+        <p>
+            We used ResNet, a pretrained model, to create meaningful feature representations of our images. ResNet's 
+            convolutional layers extract hierarchical features from input facial images, enabling the model to capture subtle 
+            variations in expressions. These embeddings serve as input to the clustering and patch-to-cluster attention mechanisms.
+        </p>
+    </section>
+    <section>
+        <h3 class="subheading">Patch-to-Cluster Attention</h3>
+        <p>
+            The patch-to-cluster attention mechanism plays a crucial role in enhancing the interpretability of the model by 
+            linking individual image patches to specific clusters. The attention mechanism operates as follows:
+        </p>
+        <ul>
+            <li><strong>Query, Key, and Value Projections:</strong> Patch embeddings are projected into query vectors (Q) using a linear layer. Cluster centroids, computed via a clustering algorithm, are projected into key (K) and value (V) vectors. These projections are used to calculate the relationships between patches and clusters.</li>
+            <li><strong>Attention Computation:</strong> Attention scores are computed using a scaled dot-product where N is the number of patches, C is the embedding dimensionality, and M is the number of clusters.</li>
+            <li><strong>Weighted Aggregation:</strong> The attention scores weigh the cluster value vectors (V). This step integrates global cluster-level information into the patch representations.</li>
+            <li><strong>Output:</strong> The aggregated patch representations are transformed via a linear output projection to produce the final enhanced patch embeddings.</li>
+        </ul>
+    </section>
+    <section>
+        <h3 class="subheading">Vision Transformer with Patch-to-Cluster Attention</h3>
+        <p>
+            This mechanism enables the model to focus on relevant clusters, improving sensitivity to localized features in facial expressions.
+        </p>
+    </section>
+    <section>
+        <h3 class="subheading">Patch Clustering</h3>
+        <ul>
+            <li>
+                <strong>K-Means Clustering:</strong> 
+                Method: K-means partitions data into clusters by iteratively minimizing the variance within clusters and updating centroids. 
+                Advantages: Simple, fast, and effective for well-separated, spherical clusters.
+            </li>
+            <li>
+                <strong>Spectral Clustering:</strong>
+                Method: Spectral clustering constructs a similarity graph, performs eigenvector decomposition, and clusters data in a low-dimensional space. 
+                Advantages: Works well for non-linear and arbitrarily shaped clusters.
+            </li>
+            <li>
+                <strong>Agglomerative Clustering:</strong>
+                Method: Agglomerative clustering is a hierarchical approach that recursively merges the most similar data points or clusters until a stopping criterion is met. 
+                Advantages: Does not require pre-specifying the number of clusters and captures hierarchical relationships.
+            </li>
+        </ul>
+    </section>
+    <section>
+        <h3 class="subheading">Experimental Setup</h3>
+        <ul>
+            <li>
+                <strong>Cluster Sizes:</strong> For each clustering method (K-means, spectral clustering, and agglomerative clustering), we test three cluster sizes: 2, 4, and 8. 
+                The choice of cluster size balances interpretability and computational efficiency.
+            </li>
+            <li>
+                <strong>Training and Testing:</strong> The generated embeddings are clustered using each method, and cluster centroids are fed into the patch-to-cluster attention module. 
+                The model is trained to classify the facial images into one of eight emotion categories, using AffectNet's labeled data for supervised learning. A validation set is used to monitor overfitting and tune hyperparameters.
+            </li>
+            <li>
+                <strong>Evaluation Metrics:</strong> Classification accuracy on the AffectNet test set.
+            </li>
+        </ul>
+        <p>
+            By systematically varying cluster sizes and clustering methods, we aim to identify configurations that maximize recognition accuracy 
+            while providing interpretable insights into the role of clusters in emotion recognition.
+        </p>
+    </section>
+            <section>
             <h3 class="subheading">CNN Embeddings</h3>
             <p> 
                 We first ensured all images were indeed of size 96 by 96. After that we split teh image into 36 patches of dimensions 16 by 16 each. Each image was now represented by 36 image patches.
