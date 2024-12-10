@@ -145,6 +145,16 @@
         <p>
             This mechanism enables the model to focus on relevant clusters, improving sensitivity to localized features in facial expressions.
         </p>
+        <div class="figure-container">
+            <div class="figure-item">
+                <p>Patch-to-Patch Attention</p>
+                <img src="images/Patch-to-Patch.jpg" alt="Patch-to-Patch Attention">
+            </div>
+            <div class="figure-item">
+                <p>Patch-to-Cluster Attention</p>
+                <img src="images/Patch-to-Cluster.jpg" alt="Patch-to-Cluster Attention">
+            </div>
+        </div>
     </section>
     <section>
         <h3 class="subheading">Patch-to-Cluster Attention</h3>
@@ -173,16 +183,27 @@
                 Advantages: Simple, fast, and effective for well-separated, spherical clusters.
             </li>
             <li>
-                <strong>Spectral Clustering:</strong>
-                Method: Spectral clustering constructs a similarity graph, performs eigenvector decomposition, and clusters data in a low-dimensional space. 
-                Advantages: Works well for non-linear and arbitrarily shaped clusters.
-            </li>
-            <li>
                 <strong>Agglomerative Clustering:</strong>
                 Method: Agglomerative clustering is a hierarchical approach that recursively merges the most similar data points or clusters until a stopping criterion is met. 
                 Advantages: Does not require pre-specifying the number of clusters and captures hierarchical relationships.
             </li>
+            <li>
+                <strong>Spectral Clustering:</strong>
+                Method: Spectral clustering constructs a similarity graph, performs eigenvector decomposition, and clusters data in a low-dimensional space. 
+                Advantages: Works well for non-linear and arbitrarily shaped clusters.
+            </li>
         </ul>
+        <div class="figure-container">
+            <div class="figure-item">
+                <img src="images/KMeans" alt="KMeans Clustering">
+            </div>
+            <div class="figure-item">
+                <img src="images/Agglo" alt="Agglomerative Clustering">
+            </div>
+            <div class="figure-item">
+                <img src="images/Spectral" alt="Spectral Clustering">
+            </div>
+        </div>
     </section>
     <section>
         <h3 class="subheading">Experimental Setup</h3>
