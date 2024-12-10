@@ -17,7 +17,7 @@
         <a href="#introduction">Introduction</a>
         <a href="#preprocessing">Data</a>
         <a href="#methods">Methods</a>
-        <a href="#results">Results</a>
+        <a href="#experiments">Experiments</a>
         <a href="#conclusion">Conclusion</a>
     </nav>
 
@@ -205,28 +205,29 @@
             </div>
         </div>
     </section>
-    <section>
-        <h3 class="subheading">Experimental Setup</h3>
-        <ul>
-            <li>
-                <strong>Cluster Sizes:</strong> For each clustering method (K-means, spectral clustering, and agglomerative clustering), we test three cluster sizes: 2, 4, and 8. 
-                The choice of cluster size balances interpretability and computational efficiency.
-            </li>
-            <li>
-                <strong>Training and Testing:</strong> The generated embeddings are clustered using each method, and cluster centroids are fed into the patch-to-cluster attention module. 
-                The model is trained to classify the facial images into one of eight emotion categories, using AffectNet's labeled data for supervised learning. A validation set is used to monitor overfitting and tune hyperparameters.
-            </li>
-            <li>
-                <strong>Evaluation Metrics:</strong> Classification accuracy on the AffectNet test set.
-            </li>
-        </ul>
-        <p>
-            By systematically varying cluster sizes and clustering methods, we aim to identify configurations that maximize recognition accuracy 
-            while providing interpretable insights into the role of clusters in emotion recognition.
-        </p>
-
-        <section id="results">
-            <h1>Clustering Comparison Table</h1>
+        
+        <section id="experiments">
+            <h2>Clustering Comparison Table</h2>
+            <section>
+                <h3 class="subheading">Experimental Setup</h3>
+                <ul>
+                    <li>
+                        <strong>Cluster Sizes:</strong> For each clustering method (K-means, spectral clustering, and agglomerative clustering), we test three cluster sizes: 2, 4, and 8. 
+                        The choice of cluster size balances interpretability and computational efficiency.
+                    </li>
+                    <li>
+                        <strong>Training and Testing:</strong> The generated embeddings are clustered using each method, and cluster centroids are fed into the patch-to-cluster attention module. 
+                        The model is trained to classify the facial images into one of eight emotion categories, using AffectNet's labeled data for supervised learning. A validation set is used to monitor overfitting and tune hyperparameters.
+                    </li>
+                    <li>
+                        <strong>Evaluation Metrics:</strong> Classification accuracy on the AffectNet test set.
+                    </li>
+                </ul>
+                <p>
+                    By systematically varying cluster sizes and clustering methods, we aim to identify configurations that maximize recognition accuracy 
+                    while providing interpretable insights into the role of clusters in emotion recognition.
+                </p>
+            </section>
             <table class="results-table">
                 <thead>
                     <tr>
