@@ -143,7 +143,10 @@
     <section>
         <h3 class="subheading">Vision Transformer Architecture</h3>
         <p>
-            This mechanism enables the model to focus on relevant clusters, improving sensitivity to localized features in facial expressions.
+            Vision Transformers (ViTs) adapt the traditional transformer model to make them applicable to computer vision tasks. Unlike convolutional neural networks, which rely on local receptive fields, ViTs divide images into fixed-size patches and treat them as a sequence of tokens which are linearly projected into an embedding space. The self-attention mechanism in ViTs then computes relationships between all pairs of patches (patch-to-patch attention). A learnable class token aggregates information from all patches, and its output is used for classification tasks. ViTs excel at capturing long-range dependencies and global patterns in image data, making them particularly effective for tasks requiring detailed contextual understanding. 
+        </p>
+        <p>
+            A well known issue with patch-to-patch attention is that it suffers from quadratic complexity, since every query must interact with every key. Our architecture instead uses Patch-to-Cluster attention, where a predefined number of cluster assignments is first learned and then used in computing the key and value, resulting in linear complexity.
         </p>
         <div class="grid-container grid-2-columns">
             <div class="grid-item">
