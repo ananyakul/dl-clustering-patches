@@ -93,7 +93,7 @@ ul, ol {
 
 .grid-item {
     text-align: center;
-    max-width: 150px; /* Consistent size for grid items */
+    max-width: 300px; /* Consistent size for grid items */
 }
 
 .grid-item img {
