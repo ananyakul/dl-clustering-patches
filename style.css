@@ -132,3 +132,35 @@ table {
 .results-table tr:hover {
     background-color: #eafaf1;
 }
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    justify-items: center;
+    margin: 2rem 0;
+}
+
+.grid-item {
+    text-align: center;
+}
+
+.grid-item img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.label {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.bar-chart {
+            text-align: center;
+            margin: 2rem 0;
+        }
