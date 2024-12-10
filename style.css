@@ -91,6 +91,15 @@ ul, ol {
     margin: 2rem 0;
 }
 
+.grid-container.two-columns {
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+}
+
+/* Three-Column Grid */
+.grid-container.three-columns {
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+}
+
 .grid-item {
     text-align: center;
     max-width: 250px; /* Consistent size for grid items */
