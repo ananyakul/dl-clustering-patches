@@ -1,34 +1,35 @@
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
+    line-height: 1.8; /* Improved readability */
     margin: 0;
     padding: 0;
     color: #333;
     background-color: #f9f9f9;
+    font-size: 18px; /* Increased overall font size */
 }
 
 header {
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 2.5rem 1rem; /* Increased padding for prominence */
     background-color: #170e78;
     color: white;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 3rem; /* Larger main title font size */
 }
 
 header p {
-    font-size: 1.2rem;
+    font-size: 1.4rem; /* Larger subtitle */
     margin-top: 0.5rem;
 }
 
 h3 {
     color: #170e78;
-    margin-top: 1rem;
-    font-size: 1.4rem;
+    margin-top: 1.5rem;
+    font-size: 1.6rem; /* Slightly larger for emphasis */
 }
 
 nav {
@@ -39,8 +40,9 @@ nav {
 nav a {
     text-decoration: none;
     color: #170e78;
-    margin: 0 1rem;
+    margin: 0 1.5rem; /* More spacing between links */
     font-weight: bold;
+    font-size: 1.2rem; /* Larger navigation links */
 }
 
 nav a:hover {
@@ -48,40 +50,83 @@ nav a:hover {
 }
 
 main {
-    width: 80%;
+    width: 85%; /* Slightly wider container */
     max-width: 1200px;
     margin: 2rem auto;
-    padding: 1.5rem;
+    padding: 2rem; /* Increased padding */
     background: white;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1rem; /* Overall font size inside main */
 }
 
 h2 {
     color: #170e78;
     border-bottom: 2px solid #170e78;
-    padding-bottom: 0.3rem;
+    padding-bottom: 0.5rem;
+    font-size: 2rem; /* Larger section titles */
 }
 
 .audio-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 1rem;
+    gap: 1.5rem; /* Adjusted gap */
+    margin-top: 1.5rem;
 }
 
 .audio-item {
     flex: 1 1 calc(50% - 1rem);
     background: #f0f0f0;
-    padding: 1rem;
+    padding: 1.5rem; /* Increased padding for better spacing */
     border-radius: 8px;
+}
+
+/* Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Larger min column width */
+    gap: 2rem; /* More spacing between items */
+    justify-items: center;
+    margin: 2rem 0;
+}
+
+.grid-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.label {
+    margin-top: 0.7rem;
+    font-size: 1rem; /* Increased font size for labels */
+    font-weight: bold;
+    color: #333;
+}
+
+/* Responsive Grid */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .grid-item img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .label {
+        font-size: 0.9rem;
+    }
 }
 
 .figure-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 1rem;
+    gap: 1.5rem;
+    margin-top: 2rem;
 }
 
 .figure-item {
@@ -98,9 +143,10 @@ h2 {
 footer {
     text-align: center;
     margin-top: 2rem;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     background: #170e78;
     color: white;
+    font-size: 1.1rem; /* Increased footer text size */
 }
 
 footer a {
@@ -111,20 +157,21 @@ footer a {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 1rem 0;
+    margin: 1.5rem 0; /* Larger spacing */
 }
 
 .results-table th,
 .results-table td {
     border: 1px solid #333;
-    padding: 0.8rem;
+    padding: 1rem;
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.1rem; /* Larger table text */
 }
 
 .results-table th {
     background-color: #170e78;
     color: white;
+    font-size: 1.2rem; /* Distinguish headers */
 }
 
 .results-table tr:nth-child(even) {
@@ -133,28 +180,6 @@ table {
 
 .results-table tr:hover {
     background-color: #e0e7ff;
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 1.5rem;
-    justify-items: center;
-    margin: 2rem 0;
-}
-
-.grid-item img {
-    width: 100%;
-    max-width: 150px;
-    height: auto;
-    border-radius: 8px;
-}
-
-.label {
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: #333;
 }
 
 .bar-chart {
@@ -175,7 +200,7 @@ table {
 /* Subheading Styling */
 .subheading {
     color: #003366;
-    font-size: 1.5rem;
+    font-size: 1.7rem; /* Larger subheadings */
     margin-top: 1.5rem;
     margin-bottom: 1rem;
     text-decoration: none;
@@ -183,24 +208,24 @@ table {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    main {
-        width: 95%;
-        padding: 1rem;
+    body {
+        font-size: 16px; /* Adjust body text size for smaller screens */
     }
 
-    .grid-container {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    main {
+        width: 95%;
+        padding: 1.5rem;
     }
 
     header {
-        padding: 1rem 0.5rem;
+        padding: 1.5rem 1rem;
     }
 
     header h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     header p {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 }
