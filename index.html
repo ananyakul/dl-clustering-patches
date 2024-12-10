@@ -63,6 +63,7 @@
                 </p>
                 <div class="bar-chart">
                     <img src="images/Data_Distribution.png" alt="Bar chart showing original emotion distribution">
+                    <p>Figure 1: Original Data Distribution Across Classes</p>
                 </div>
             </section>
     
@@ -136,8 +137,8 @@
             <h2>Methods</h2>
             <div class="figure-container">
                 <div class="figure-item">
-                    <h3>Figure 1: Architecture Flow</h3>
                     <img src="images/DL_Arch_Final.png" alt="Model Arch">
+                    <p>Figure 2: Architecture Flow</p>
                 </div>
             </div>
     <section>
@@ -162,8 +163,7 @@
     <section>
         <h3 class="subheading">Patch-to-Cluster Attention</h3>
         <p>
-            The patch-to-cluster attention mechanism plays a crucial role in enhancing the interpretability of the model by 
-            linking individual image patches to specific clusters. The attention mechanism operates as follows:
+            Our attention mechanism operates as follows:
         </p>
         <ul>
             <li><strong>Query, Key, and Value Projections:</strong> Patch embeddings are projected into query vectors (Q) using a linear layer. Cluster centroids, computed via a clustering algorithm, are projected into key (K) and value (V) vectors. These projections are used to calculate the relationships between patches and clusters.</li>
@@ -175,6 +175,7 @@
             <li><strong>Weighted Aggregation:</strong> The attention scores weigh the cluster value vectors (V). This step integrates global cluster-level information into the patch representations.</li>
             <li><strong>Output:</strong> The aggregated patch representations are transformed via a linear output projection to produce the final enhanced patch embeddings.</li>
         </ul>
+        <p>Our model architecture diverges from the traditional Vision Transformer design by employing patch-to-cluster attention (See Figure 2).</p>
     </section>
     
     <section>
