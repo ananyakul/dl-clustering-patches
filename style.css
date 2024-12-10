@@ -179,7 +179,7 @@ footer a {
     align-items: center; /* Align content vertically in the center */
     flex-direction: column; /* Stack items vertically */
     margin: 2rem auto; /* Add space above and below the figure */
-    max-width: 90%; /* Restrict container width */
+    max-width: 100%; /* Restrict container width */
     text-align: center; /* Center-align text inside the container */
 }
 
