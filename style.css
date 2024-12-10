@@ -11,7 +11,7 @@ body {
 header {
     text-align: center;
     padding: 2rem 1rem;
-    background-color: #6495ED; /* Lighter blue */
+    background-color: #170e78; /* Lighter blue */
     color: white;
 }
 
@@ -32,7 +32,7 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: #6495ED; /* Lighter blue */
+    color: #170e78; /* Lighter blue */
     margin: 0 1rem;
     font-weight: bold;
 }
@@ -51,8 +51,8 @@ main {
 }
 
 h2 {
-    color: #6495ED; /* Lighter blue */
-    border-bottom: 2px solid #6495ED; /* Lighter blue */
+    color: #170e78; /* Lighter blue */
+    border-bottom: 2px solid #170e78; /* Lighter blue */
     padding-bottom: 0.3rem;
 }
 
@@ -97,7 +97,7 @@ footer {
     text-align: center;
     margin-top: 2rem;
     padding: 1rem 0;
-    background: #6495ED; /* Lighter blue */
+    background: #170e78; /* Lighter blue */
     color: white;
 }
 
