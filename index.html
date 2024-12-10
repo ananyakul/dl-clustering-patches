@@ -113,8 +113,32 @@
                     </div>
                 </div>
             </section>
+            </section>
+                <h3 class="subheading">CNN Embeddings</h3>
+                <p> 
+                    We first ensured all images were indeed of size 96 by 96. After that we split teh image into 36 patches of dimensions 16 by 16 each. Each image was now represented by 36 image patches.
+                </p>
+                <p>
+                    As part of our methodolgy, we utilize a pretrained <strong>ResNet-50</strong> model to generate 
+                    2048-dimensional feature embeddings for each image patch. These embeddings are extracted from the 
+                    global average pooling layer of the network, which ensures compact and informative representations 
+                    of visual features.
+                </p>
+                <p>
+                    These embeddings serve as the foundation for our clustering techniques. By leveraging transfer 
+                    learning, we efficiently extract high-level features, reducing computational overhead while 
+                    maintaining rich feature representations for the downstream clustering tasks.
+                </p>
+                <h5>Visualization of Embeddings</h5>
+                <p>
+                    Below, we provide a t-SNE visualization of the 2048-dimensional embeddings. This plot highlights 
+                    the structure of the embeddings and their potential grouping, which is pivotal for clustering success:
+                </p>
+                <div class="embedding-visualization">
+                    <img src="images/tsne_embeddings.png" alt="t-SNE Visualization of CNN Embeddings">
+                </div>
+            </section>
 
-        </section>    
         <section id="methods">
             <h2>Methods</h2>
             <div class="figure-container">
@@ -189,54 +213,6 @@
             By systematically varying cluster sizes and clustering methods, we aim to identify configurations that maximize recognition accuracy 
             while providing interpretable insights into the role of clusters in emotion recognition.
         </p>
-    </section>
-            <section>
-            <h3 class="subheading">CNN Embeddings</h3>
-            <p> 
-                We first ensured all images were indeed of size 96 by 96. After that we split teh image into 36 patches of dimensions 16 by 16 each. Each image was now represented by 36 image patches.
-            </p>
-            <p>
-                As part of our methodolgy, we utilize a pretrained <strong>ResNet-50</strong> model to generate 
-                2048-dimensional feature embeddings for each image patch. These embeddings are extracted from the 
-                global average pooling layer of the network, which ensures compact and informative representations 
-                of visual features.
-            </p>
-            <p>
-                These embeddings serve as the foundation for our clustering techniques. By leveraging transfer 
-                learning, we efficiently extract high-level features, reducing computational overhead while 
-                maintaining rich feature representations for the downstream clustering tasks.
-            </p>
-            <h5>Visualization of Embeddings</h5>
-            <p>
-                Below, we provide a t-SNE visualization of the 2048-dimensional embeddings. This plot highlights 
-                the structure of the embeddings and their potential grouping, which is pivotal for clustering success:
-            </p>
-            <div class="embedding-visualization">
-                <img src="images/tsne_embeddings.png" alt="t-SNE Visualization of CNN Embeddings">
-            </div>
-        </section>
-
-            <p>Our preliminary analysis of the generated embeddings reveals the following insights:</p>
-            <ul>
-                <li>
-                    <b>Clustering Patterns:</b> Both PCA and t-SNE visualizations show distinct regions, 
-                    suggesting potential grouping of embeddings based on facial emotion characteristics or metadata 
-                    (e.g., specific emotion clusters or labeling differences).
-                </li>
-                <li>
-                    <b>Separation in t-SNE:</b> The t-SNE plot highlights better local relationships, 
-                    indicating that embeddings capture nuanced features effectively, making it suitable for identifying distinct emotions.
-                </li>
-                <li>
-                    <b>Outlier Detection:</b> Sparse points in the plots may correspond to outliers or unique embeddings, 
-                    potentially representing uncommon emotional patterns or anomalies in the dataset.
-                </li>
-                <li>
-                    <b>Next Steps:</b> Incorporating metadata (e.g., intensity scores or subject identifiers) 
-                    as color-coded labels could reveal additional patterns and validate how well embeddings align with these attributes.
-                </li>
-            </ul>
-        </section>
 
         <section id="results">
             <h1>Clustering Comparison Table</h1>
