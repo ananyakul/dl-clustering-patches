@@ -116,7 +116,6 @@
                 </section>
 
                 <h2>Methods</h2>
-                <header>
                 <div class="figure-container">
                     <div class="figure-item">
                         <h3>Figure 1: Architecture Flow</h3>
@@ -125,14 +124,23 @@
                 </div>
                 <p>Our preliminary analysis of the generated embeddings reveals the following insights:</p>
                 <ul>
-                    <li><b>Clustering Patterns:</b> Both PCA and t-SNE visualizations show distinct regions, suggesting potential grouping of embeddings based on musical characteristics or metadata (e.g., genre or human vs. AI-generated labels).
-    </li>
-                    <li><b>Separation in t-SNE:</b> The t-SNE plot highlights better local relationships, indicating that embeddings capture nuanced features effectively, making it suitable for identifying similar audio samples.
-    </li>
-                    <li><b>Outlier Detection:</b> Sparse points in the plots may correspond to outliers or unique embeddings, potentially representing uncommon musical patterns or anomalies in the dataset.
-    </li>
-                    <li><b>Next Steps:</b> Incorporating metadata (e.g., genres, repetition scores) as color-coded labels could reveal additional patterns and validate how well embeddings align with these attributes.
-    </li>
+                    <li>
+                        <b>Clustering Patterns:</b> Both PCA and t-SNE visualizations show distinct regions, 
+                        suggesting potential grouping of embeddings based on facial emotion characteristics or metadata 
+                        (e.g., specific emotion clusters or labeling differences).
+                    </li>
+                    <li>
+                        <b>Separation in t-SNE:</b> The t-SNE plot highlights better local relationships, 
+                        indicating that embeddings capture nuanced features effectively, making it suitable for identifying distinct emotions.
+                    </li>
+                    <li>
+                        <b>Outlier Detection:</b> Sparse points in the plots may correspond to outliers or unique embeddings, 
+                        potentially representing uncommon emotional patterns or anomalies in the dataset.
+                    </li>
+                    <li>
+                        <b>Next Steps:</b> Incorporating metadata (e.g., intensity scores or subject identifiers) 
+                        as color-coded labels could reveal additional patterns and validate how well embeddings align with these attributes.
+                    </li>
                 </ul>
             </section>
 
