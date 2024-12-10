@@ -11,7 +11,7 @@ body {
 header {
     text-align: center;
     padding: 2rem 1rem;
-    background-color: #170e78; /* Lighter blue */
+    background-color: #170e78;
     color: white;
 }
 
@@ -38,7 +38,7 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: #170e78; /* Lighter blue */
+    color: #170e78;
     margin: 0 1rem;
     font-weight: bold;
 }
@@ -49,16 +49,17 @@ nav a:hover {
 
 main {
     width: 80%;
+    max-width: 1200px;
     margin: 2rem auto;
-    padding: 1rem;
+    padding: 1.5rem;
     background: white;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-    color: #170e78; /* Lighter blue */
-    border-bottom: 2px solid #170e78; /* Lighter blue */
+    color: #170e78;
+    border-bottom: 2px solid #170e78;
     padding-bottom: 0.3rem;
 }
 
@@ -74,10 +75,6 @@ h2 {
     background: #f0f0f0;
     padding: 1rem;
     border-radius: 8px;
-}
-
-.audio-item h3 {
-    margin: 0 0 0.5rem 0;
 }
 
 .figure-container {
@@ -98,12 +95,11 @@ h2 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer */
 footer {
     text-align: center;
     margin-top: 2rem;
     padding: 1rem 0;
-    background: #170e78; /* Lighter blue */
+    background: #170e78;
     color: white;
 }
 
@@ -136,27 +132,22 @@ table {
 }
 
 .results-table tr:hover {
-    background-color: #eafaf1;
+    background-color: #e0e7ff;
 }
-
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
     justify-items: center;
     margin: 2rem 0;
 }
 
-.grid-item {
-    text-align: center;
-}
-
 .grid-item img {
-    width: 150px;
+    width: 100%;
+    max-width: 150px;
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .label {
@@ -168,25 +159,48 @@ table {
 
 .bar-chart {
     display: flex;
-    justify-content: center; /* Centers the chart */
+    justify-content: center;
     margin: 1.5rem 0;
-    overflow: hidden; /* Ensures no overflow */
+    overflow: hidden;
 }
 
 .bar-chart img {
-    width: 100%; /* Makes the image responsive */
-    max-width: 800px; /* Restricts maximum width */
-    height: auto; /* Maintains aspect ratio */
-    border-radius: 8px; /* Adds rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds shadow for polish */
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 
 /* Subheading Styling */
 .subheading {
-    color: #0056b3; /* Blue color for subheadings */
+    color: #003366;
     font-size: 1.5rem;
-    margin-top: 2rem; /* Adds space above the subheading */
-    margin-bottom: 0.8rem; /* Adds space below the subheading */
-    text-decoration: underline; /* Optional: underlines the subheading */
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    header {
+        padding: 1rem 0.5rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
 }
