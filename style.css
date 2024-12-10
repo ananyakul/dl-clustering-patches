@@ -234,6 +234,35 @@ footer a {
     font-size: 1.2rem; /* Adjust the font size if necessary */
 }
 
+/* Specific Grid Styling for the Example Images */
+.example-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four columns */
+    gap: 1.5rem; /* Smaller gaps between items */
+    justify-content: center; /* Center the grid content */
+    margin: 2rem auto; /* Add vertical spacing and center the grid */
+    max-width: 1400px; /* Ensure grid fits within a wider container */
+}
+
+.example-grid .grid-item {
+    text-align: center;
+    width: 200px; /* Increase item width for larger images */
+}
+
+.example-grid .grid-item img {
+    width: 100%; /* Ensure images fill the item width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for the images */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for polish */
+}
+
+.example-grid .grid-item .label {
+    margin-top: 0.5rem; /* Space between image and label */
+    font-size: 1.3rem; /* Slightly larger label font size */
+    font-weight: bold;
+    color: #333; /* Neutral text color */
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -274,5 +303,19 @@ footer a {
 
     .figure-container {
         padding: 0 1rem; /* Add padding for mobile devices */
+    }
+
+    .example-grid {
+        grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns on smaller screens */
+        gap: 1rem; /* Reduce gaps for smaller screens */
+    }
+    .example-grid .grid-item {
+        width: 150px; /* Adjust width for smaller screens */
+    }
+    .example-grid .grid-item img {
+        border-radius: 6px; /* Slightly smaller rounding for smaller images */
+    }
+    .example-grid .grid-item .label {
+        font-size: 1.1rem; /* Reduce label font size slightly */
     }
 }
