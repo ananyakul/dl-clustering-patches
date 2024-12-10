@@ -27,6 +27,94 @@
 
         <section id="methods">
             <h2>Methods</h2>
+            <header>
+        <h1>Dataset and Preprocessing</h1>
+        </header>
+        <main>
+            <section>
+                <h2>Dataset Description</h2>
+                <p>
+                    The dataset used for this project is derived from the 
+                    <a href="https://www.kaggle.com/datasets/noamsegal/affectnet-training-data" target="_blank">AffectNet Training Data</a>, 
+                    one of the largest datasets for facial emotion recognition. It provides labeled examples of human faces for eight primary emotions: 
+                    <strong>Anger, Contempt, Disgust, Fear, Happiness, Neutral, Sadness,</strong> and <strong>Surprise</strong>.
+                </p>
+                <p>
+                    AffectNet stands out due to its diversity, with faces captured in real-world environments under varying lighting, poses, and demographics. 
+                    This makes it an ideal dataset for training models capable of generalizing across diverse conditions.
+                </p>
+            </section>
+    
+            <section>
+                <h2>Challenges in the Dataset</h2>
+                <p>
+                    Despite its richness, AffectNet presents significant challenges:
+                </p>
+                <ul>
+                    <li><strong>Class Imbalance:</strong> Certain emotions like "Happiness" dominate the dataset, while others like "Disgust" are underrepresented.</li>
+                    <li><strong>Variability:</strong> Differences in lighting, facial occlusions, and pose angles add noise to the dataset.</li>
+                    <li><strong>Subjectivity:</strong> Emotions are inherently subjective, and labeling inconsistencies may arise across annotators.</li>
+                </ul>
+            </section>
+    
+            <section>
+                <h2>Original Emotion Distribution</h2>
+                <p>
+                    The original dataset exhibits a skewed distribution across emotion classes, as visualized in the chart below:
+                </p>
+                <div class="bar-chart">
+                    <img src="images/Data_Distribution.png" alt="Bar chart showing original emotion distribution">
+                </div>
+            </section>
+    
+            <section>
+                <h2>Balanced Dataset</h2>
+                <p>
+                    To address the class imbalance, we balanced the dataset by subsampling 
+                    <strong>2,477 images</strong> per class, resulting in a total of <strong>19,816 images</strong>. 
+                    This ensures fair representation across all emotions and prevents the model from being biased toward overrepresented classes.
+                </p>
+            </section>
+            <section>
+                <h2>Example Images</h2>
+                <p>
+                    Below are sample images from the dataset, showcasing one example from each emotion class, labeled for clarity:
+                </p>
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <img src="images/anger.jpg" alt="Anger Example">
+                        <p class="label">Anger</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/contempt.png" alt="Contempt Example">
+                        <p class="label">Contempt</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/disgust.jpg" alt="Disgust Example">
+                        <p class="label">Disgust</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/fear.jpg" alt="Fear Example">
+                        <p class="label">Fear</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/happy.png" alt="Happiness Example">
+                        <p class="label">Happiness</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/neutral.png" alt="Neutral Example">
+                        <p class="label">Neutral</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/sad.jpg" alt="Sad Example">
+                        <p class="label">Sad</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/surprise.png" alt="Surprise Example">
+                        <p class="label">Surprise</p>
+                    </div>
+                </div>
+            </section>
             <div class="figure-container">
                 <div class="figure-item">
                     <h3>Figure 1: Architecture Flow</h3>
