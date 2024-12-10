@@ -182,19 +182,13 @@
         <h3 class="subheading">Patch Clustering</h3>
         <ul>
             <li>
-                <strong>K-Means Clustering:</strong> 
-                Method: K-means partitions data into clusters by iteratively minimizing the variance within clusters and updating centroids. 
-                Advantages: Simple, fast, and effective for well-separated, spherical clusters.
+                <strong>K-Means Clustering:</strong> iteratively partitions data into a predefined number of clusters by minimizing the variance within each cluster. Centroids are initialized randomly, and clusters are updated based on the distance of each data point to the nearest centroid. K-means is simple and computationally efficient, making it suitable for high-dimensional data. It is most effective for well-separated and spherical clusters.
             </li>
             <li>
-                <strong>Agglomerative Clustering:</strong>
-                Method: Agglomerative clustering is a hierarchical approach that recursively merges the most similar data points or clusters until a stopping criterion is met. 
-                Advantages: Does not require pre-specifying the number of clusters and captures hierarchical relationships.
+                <strong>Agglomerative Clustering:</strong> starts with each data point as its own cluster and recursively merges the most similar clusters until a predefined number is reached. Notably, it is able to capture hierarchical relationships in the data and is also computationally efficient.
             </li>
             <li>
-                <strong>Spectral Clustering:</strong>
-                Method: Spectral clustering constructs a similarity graph, performs eigenvector decomposition, and clusters data in a low-dimensional space. 
-                Advantages: Works well for non-linear and arbitrarily shaped clusters.
+                <strong>Spectral Clustering:</strong> Spectral clustering constructs a similarity graph based on pairwise relationships between data points and performs eigenvector decomposition to embed the graph into a lower-dimensional space for clustering. It is known for handling complex, arbitrarily shaped clusters effectively. It is also suitable for datasets where clusters are not linearly separable.
             </li>
         </ul>
         <div class="grid-container grid-3-columns">
