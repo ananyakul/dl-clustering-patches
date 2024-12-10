@@ -123,6 +123,32 @@
                     <img src="images/DL_Arch_Final.png" alt="Model Arch">
                 </div>
             </div>
+            <section>
+            <h3 class="subheading">CNN Embeddings</h3>
+            <p> 
+                We first ensured all images were indeed of size 96 by 96. After that we split teh image into 36 patches of dimensions 16 by 16 each. Each image was now represented by 36 image patches.
+            </p>
+            <p>
+                As part of our methodolgy, we utilize a pretrained <strong>ResNet-50</strong> model to generate 
+                2048-dimensional feature embeddings for each image patch. These embeddings are extracted from the 
+                global average pooling layer of the network, which ensures compact and informative representations 
+                of visual features.
+            </p>
+            <p>
+                These embeddings serve as the foundation for our clustering techniques. By leveraging transfer 
+                learning, we efficiently extract high-level features, reducing computational overhead while 
+                maintaining rich feature representations for the downstream clustering tasks.
+            </p>
+            <h5>Visualization of Embeddings</h5>
+            <p>
+                Below, we provide a t-SNE visualization of the 2048-dimensional embeddings. This plot highlights 
+                the structure of the embeddings and their potential grouping, which is pivotal for clustering success:
+            </p>
+            <div class="embedding-visualization">
+                <img src="images/tsne_embeddings.png" alt="t-SNE Visualization of CNN Embeddings">
+            </div>
+        </section>
+
             <p>Our preliminary analysis of the generated embeddings reveals the following insights:</p>
             <ul>
                 <li>
