@@ -1,115 +1,199 @@
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.8; /* Improved readability */
+    line-height: 1.8; /* Adjust line height for better readability */
     margin: 0;
     padding: 0;
-    color: #333;
-    background-color: #f9f9f9;
-    font-size: 18px; /* Increased overall font size */
+    color: #333; /* Neutral text color */
+    background-color: #f9f9f9; /* Light background */
+    font-size: 18px; /* Base font size */
 }
 
 header {
     text-align: center;
-    padding: 2.5rem 1rem; /* Increased padding for prominence */
-    background-color: #170e78;
+    padding: 2.5rem 1rem;
+    background-color: #170e78; /* Theme color */
     color: white;
 }
 
 header h1 {
     margin: 0;
-    font-size: 3rem; /* Larger main title font size */
+    font-size: 2.5rem;
+    font-weight: bold;
 }
 
 header p {
-    font-size: 1.4rem; /* Larger subtitle */
+    font-size: 1.2rem;
     margin-top: 0.5rem;
 }
 
-h3 {
-    color: #170e78;
-    margin-top: 1.5rem;
-    font-size: 1.6rem; /* Slightly larger for emphasis */
-}
-
+/* Navigation Bar */
 nav {
     text-align: center;
-    margin: 1rem 0;
+    margin: 1.5rem 0;
 }
 
 nav a {
     text-decoration: none;
-    color: #170e78;
-    margin: 0 1.5rem; /* More spacing between links */
+    color: #170e78; /* Theme color for links */
+    margin: 0 1.5rem; /* Spacing between links */
     font-weight: bold;
-    font-size: 1.2rem; /* Larger navigation links */
+    font-size: 1.2rem; /* Larger link text */
 }
 
 nav a:hover {
     text-decoration: underline;
 }
 
+/* Main Container */
 main {
-    width: 85%; /* Slightly wider container */
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 2rem; /* Increased padding */
+    width: 85%; /* Main container width */
+    max-width: 1200px; /* Restrict maximum width */
+    margin: 2rem auto; /* Center main content */
+    padding: 1.5rem;
     background: white;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    font-size: 1rem; /* Overall font size inside main */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 h2 {
-    color: #170e78;
+    color: #170e78; /* Theme color */
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
     border-bottom: 2px solid #170e78;
     padding-bottom: 0.5rem;
-    font-size: 2rem; /* Larger section titles */
 }
 
-.audio-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem; /* Adjusted gap */
+h3 {
+    color: #170e78;
+    font-size: 1.8rem;
     margin-top: 1.5rem;
+    font-weight: bold;
 }
 
-.audio-item {
-    flex: 1 1 calc(50% - 1rem);
-    background: #f0f0f0;
-    padding: 1.5rem; /* Increased padding for better spacing */
-    border-radius: 8px;
+p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
 }
 
-/* Grid Container */
+ul, ol {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Grid Container for Example Images */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Larger min column width */
-    gap: 2rem; /* More spacing between items */
+    grid-template-columns: repeat(4, 1fr); /* Fixed 4 columns */
+    gap: 2rem; /* Consistent spacing between items */
     justify-items: center;
+    align-items: center;
     margin: 2rem 0;
+}
+
+.grid-item {
+    text-align: center;
+    max-width: 150px; /* Consistent size for grid items */
 }
 
 .grid-item img {
     width: 150px;
     height: 150px;
-    object-fit: cover;
+    object-fit: cover; /* Ensures images fit within their box */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .label {
-    margin-top: 0.7rem;
-    font-size: 1rem; /* Increased font size for labels */
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
     font-weight: bold;
     color: #333;
 }
 
-/* Responsive Grid */
+/* Bar Chart */
+.bar-chart {
+    display: flex;
+    justify-content: center; /* Centers the chart */
+    margin: 1.5rem 0;
+    overflow: hidden; /* Ensures no overflow */
+}
+
+.bar-chart img {
+    width: 100%; /* Makes the image responsive */
+    max-width: 800px; /* Restricts maximum width */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px; /* Adds rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds shadow for polish */
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+}
+
+.results-table th,
+.results-table td {
+    border: 1px solid #333;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.results-table th {
+    background-color: #170e78;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.results-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.results-table tr:hover {
+    background-color: #e0e7ff; /* Light blue for hover effect */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1.5rem 0;
+    background: #170e78; /* Theme color */
+    color: white;
+    font-size: 1rem; /* Footer text size */
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
+    body {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+
+    main {
+        width: 95%; /* Adjust main container width */
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 2rem; /* Adjust header title size */
+    }
+
+    header p {
+        font-size: 1rem; /* Adjust header subtitle size */
+    }
+
     .grid-container {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-        gap: 1.5rem;
+        grid-template-columns: repeat(2, 1fr); /* Adjust grid to 2 columns */
+        gap: 1.5rem; /* Reduced gap for smaller screens */
     }
 
     .grid-item img {
@@ -118,114 +202,6 @@ h2 {
     }
 
     .label {
-        font-size: 0.9rem;
-    }
-}
-
-.figure-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-.figure-item {
-    flex: 1 1 calc(50% - 1rem);
-    text-align: center;
-}
-
-.figure-item img {
-    max-width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-footer {
-    text-align: center;
-    margin-top: 2rem;
-    padding: 1.5rem 0;
-    background: #170e78;
-    color: white;
-    font-size: 1.1rem; /* Increased footer text size */
-}
-
-footer a {
-    color: white;
-    text-decoration: underline;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1.5rem 0; /* Larger spacing */
-}
-
-.results-table th,
-.results-table td {
-    border: 1px solid #333;
-    padding: 1rem;
-    text-align: center;
-    font-size: 1.1rem; /* Larger table text */
-}
-
-.results-table th {
-    background-color: #170e78;
-    color: white;
-    font-size: 1.2rem; /* Distinguish headers */
-}
-
-.results-table tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-.results-table tr:hover {
-    background-color: #e0e7ff;
-}
-
-.bar-chart {
-    display: flex;
-    justify-content: center;
-    margin: 1.5rem 0;
-    overflow: hidden;
-}
-
-.bar-chart img {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Subheading Styling */
-.subheading {
-    color: #003366;
-    font-size: 1.7rem; /* Larger subheadings */
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-    text-decoration: none;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    body {
-        font-size: 16px; /* Adjust body text size for smaller screens */
-    }
-
-    main {
-        width: 95%;
-        padding: 1.5rem;
-    }
-
-    header {
-        padding: 1.5rem 1rem;
-    }
-
-    header h1 {
-        font-size: 2.5rem;
-    }
-
-    header p {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 }
