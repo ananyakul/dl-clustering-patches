@@ -214,6 +214,16 @@ footer a {
     margin-top: 0.5rem;
 }
 
+.references {
+    list-style-type: none; /* Removes numbering or bullets */
+    padding-left: 0; /* Aligns text to the left */
+}
+
+.references li {
+    margin-bottom: 1rem; /* Adds spacing between references */
+    font-size: 1.2rem; /* Adjust the font size if necessary */
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
