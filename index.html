@@ -24,7 +24,23 @@
     <main>
         <section id="introduction">
             <h2>Introduction</h2>
-            <p>This project investigates how different image patch clustering algorithms affect the accuracy of facial emotion recognition. </p>
+            <section>
+                <h3 class="subheading">Background</h3>
+                <p>Emotion recognition has emerged as a pivotal task in the field of computer vision, with applications ranging from social robots to mental health diagnostics [1]. By analyzing facial expressions, emotion recognition systems enable machines to understand human emotions in real-time, fostering more natural and empathetic interactions. These systems are also transforming industries such as healthcare, where robots are increasingly able to diagnose and monitor mental health conditions, alerting human doctors of emergencies before they occur [2]. </p>
+                <p>One of the most innovative approaches in computer vision is the use of Vision Transformers (ViTs), which are based on the Transformer models that revolutionized natural language processing. In recent years, ViTs have been leveraged for computer vision tasks including high-level vision, image recognition, feature extraction, and video processing, performing similarly to or better than traditional convolutional and recurrent neural networks (CNN/RNN) [3]. Complementary to ViTs, computer vision tasks increasingly rely on patching, a technique where images are divided into smaller, fixed-size pieces (“patches”) in order to focus on individual regions, striking a balance between analyzing individual pixels (too localized) and the entirety of the image (too broad). Therefore, patching can provide more fine-grained analysis of an image while capturing local relationships [4].</p>
+                <p>Recent work has also experimented with clustering patches together in order to improve efficiency and group morphologically similar patches, thereby increasing the model’s understanding of the image [6]. Clustering algorithms for patches mimic the already well-known and common clustering methods used in machine learning, including: k-means clustering, spectral clustering, gaussian mixture models (GMMs), agglomerative hierarchical clustering, DBSCAN, and mean shift clustering [7].</p>
+            </section>
+
+            <section>
+                <h3 class="subheading">Project Goals</h3>
+                <p>Currently, ViTs utilize image patches as tokens for patch-to-patch attention. However, past work has shown a moderate increase in accuracy and decrease in complexity by clustering these patches together and using patch-to-cluster attention instead [5, 6]. This project investigates the impact of various patch clustering techniques on emotion recognition accuracy, using the AffectNet dataset as our primary benchmark. Our goal is to identify which clustering methodologies, and number of clusters, most effectively enhance emotion detection accuracy. As a secondary evaluation metric, we will be analyzing the trade-offs between recognition accuracy and time efficiency to understand which method is the most practical for real-world usage.</p>
+                <p>We hypothesize that different clustering approaches will yield varying levels of accuracy in identifying emotions, with non-spherical clusters likely outperforming others. We also anticipate that the optimal number of clusters will strike a balance, resulting in high recognition accuracy by not creating too many or too few groups of facial features (patches).</p>
+            </section>
+
+            <section>
+                <h3 class="subheading">Approach</h3>
+                <p>The model pipeline we use includes two main parts: a clustering algorithm to cluster image patches, and a Vision Transformer (ViT) utilizing patch-to-cluster attention for emotion recognition accuracy results. The patch-to-cluster attention mechanism and the ViT hyperparameters remain fixed throughout this project, while the clustering algorithm and number of clusters are changed in order to isolate the effects of different patch clusterings on accuracy. The novelty of our approach lies in integrating patch-to-cluster attention with multiple clustering techniques to determine which method is most effective for emotion recognition. Although patch-to-cluster has been implemented before with CNN clustering [5], we expand upon this work by comparing multiple clustering algorithms (K-Means, Spectral, and Agglomerative).</p>
+            </section>
         </section>
 
         <section id="preprocessing">
@@ -302,6 +318,30 @@
                     [1] Younis, E.M.G., Mohsen, S., Houssein, E.H. et al. Machine learning for human emotion recognition: a comprehensive review. 
                     <em>Neural Comput & Applic</em> 36, 8901–8947 (2024). 
                     <a href="https://doi.org/10.1007/s00521-024-09426-2" target="_blank">https://doi.org/10.1007/s00521-024-09426-2</a>
+                </li>
+                <li>
+                    [2] M. Dhuheir, A. Albaseer, E. Baccour, A. Erbad, M. Abdallah and M. Hamdi, "Emotion Recognition for Healthcare Surveillance Systems Using Neural Networks: A Survey," 2021 International Wireless Communications and Mobile Computing (IWCMC), Harbin City, China, 2021, pp. 681-687, 
+                    <a href="https://doi.org/10.1109/IWCMC51323.2021.9498861" target="_blank">doi: 10.1109/IWCMC51323.2021.9498861</a>.
+                </li>
+                <li>
+                    [3] Kai Han, Yunhe Wang, Hanting Chen, Xinghao Chen, Jianyuan Guo, Zhenhua Liu, Yehui Tang, An Xiao, Chunjing Xu, Yixing Xu, et al. A survey on visual transformer. 
+                    <a href="https://arxiv.org/abs/2012.12556" target="_blank">arXiv preprint arXiv:2012.12556</a>, 2020.
+                </li>
+                <li>
+                    [4] Trockman, A., & Kolter, J. Z. Patches are all you need?. 
+                    <a href="https://arxiv.org/abs/2201.09792" target="_blank">arXiv preprint arXiv:2201.09792</a>, 2022.
+                </li>
+                <li>
+                    [5] R. Grainger, T. Paniagua, X. Song, N. Cuntoor, M. W. Lee and T. Wu, "PaCa-ViT: Learning Patch-to-Cluster Attention in Vision Transformers," 2023 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), Vancouver, BC, Canada, 2023, pp. 18568-18578, 
+                    <a href="https://doi.org/10.1109/CVPR52729.2023.01781" target="_blank">doi: 10.1109/CVPR52729.2023.01781</a>.
+                </li>
+                <li>
+                    [6] Y. Shen, Y. Lu, Y. Luo and J. Ke, "Cluster Image Patches with Multiple Mutual Information in Unlabelled Whole-Slide Image," 2021 IEEE International Conference on Bioinformatics and Biomedicine (BIBM), Houston, TX, USA, 2021, pp. 1509-1512, 
+                    <a href="https://doi.org/10.1109/BIBM52615.2021.9669810" target="_blank">doi: 10.1109/BIBM52615.2021.9669810</a>.
+                </li>
+                <li>
+                    [7] Nazeri, S. (2023, July 19). Comparing the-state-of-the-art clustering algorithms. 
+                    <a href="https://medium.com/@sina.nazeri/comparing-the-state-of-the-art-clustering-algorithms-1e65a08157a1" target="_blank">Medium</a>.
                 </li>
             </ul>
         </section>
