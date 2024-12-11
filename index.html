@@ -160,7 +160,7 @@
             Vision Transformers (ViTs) adapt the traditional transformer model to make them applicable to computer vision tasks. Unlike convolutional neural networks, which rely on local receptive fields, ViTs divide images into fixed-size patches and treat them as a sequence of tokens which are linearly projected into an embedding space. The self-attention mechanism in ViTs then computes relationships between all pairs of patches (patch-to-patch attention). A learnable class token aggregates information from all patches, and its output is used for classification tasks. ViTs excel at capturing long-range dependencies and global patterns in image data, making them particularly effective for tasks requiring detailed contextual understanding. 
         </p>
         <p>
-            A well known issue with patch-to-patch attention is that it suffers from quadratic complexity, since every query must interact with every key. Our architecture instead uses Patch-to-Cluster attention, where a predefined number of cluster assignments is first learned and then used in computing the key and value, resulting in linear complexity.
+            A well known issue with patch-to-patch attention is that it suffers from quadratic complexity [5], since every query must interact with every key. Our architecture instead uses Patch-to-Cluster attention, where a predefined number of cluster assignments is first learned and then used in computing the key and value, resulting in linear complexity.
         </p>
         <div class="grid-container grid-2-columns">
             <div class="grid-item">
@@ -193,6 +193,7 @@
     
     <section>
         <h3 class="subheading">Patch Clustering</h3>
+        We use the following clustering methods for the image patches [7]:
         <ul>
             <li>
                 <strong>K-Means Clustering:</strong> iteratively partitions data into a predefined number of clusters by minimizing the variance within each cluster. Centroids are initialized randomly, and clusters are updated based on the distance of each data point to the nearest centroid. K-means is simple and computationally efficient, making it suitable for high-dimensional data. It is most effective for well-separated and spherical clusters.
@@ -278,7 +279,7 @@
                Our results reveal significant differences in performance among the clustering methods across cluster sizes (k). At k=2, Spectral Clustering performed the best, likely due to its ability to capture non-linear relationships. At k=4, Agglomerative Clustering achieved the highest accuracy, possibly because its hierarchical nature allows it to merge smaller, similar clusters into larger, meaningful groupings that align well with moderate granularity. At k=8, K-Means improved slightly, while Spectral Clustering and Agglomerative Clustering both dropped, probably due to creating overly fragmented groupings that lacked coherence. Overall, Spectral Clustering showed strong performance at lower cluster sizes, Agglomerative Clustering excelled at moderate clusters, and K-Means displayed consistent, albeit lower, performance across all configurations. These results highlight the importance of choosing the right clustering method and cluster size for optimizing accuracy.
             </p>
             <p>
-                The runtime comparison of the clustering methods reveals notable differences in computational efficiency. Agglomerative clustering was the fastest, with K-Means close behind. Spectral clustering, however, was extremely computationally expensive. Spectral Clustering, while effective at capturing non-linear relationships, is significantly slower than the other methods, which could be a bottleneck for larger datasets or real-time applications. Agglomerative Clustering seems to demonstrate the best balance between accuracy and runtime at k = 4, making it a strong choice for tasks prioritizing speed and hierarchical insights. K-Means remains a good middle-ground option, offering moderate runtime and competitive accuracy, particularly as the number of clusters increases.
+                The runtime comparison of the clustering methods reveals notable differences in computational efficiency. When analyzing time complexity, we ran each clustering algorithm on 5000 embeddings (roughly ¼ of our dataset) and found that K-Means takes 21 seconds, Agglomerative takes 14 seconds, and Spectral takes 119 seconds. Agglomerative clustering was the fastest, with K-Means close behind. Spectral clustering, however, was extremely computationally expensive. Spectral Clustering, while effective at capturing non-linear relationships, is significantly slower than the other methods, which could be a bottleneck for larger datasets or real-time applications. Agglomerative Clustering seems to demonstrate the best balance between accuracy and runtime at k = 4, making it a strong choice for tasks prioritizing speed and hierarchical insights. K-Means remains a good middle-ground option, offering moderate runtime and competitive accuracy, particularly as the number of clusters increases.
             </p>
         </section>
 
