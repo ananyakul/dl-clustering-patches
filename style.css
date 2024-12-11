@@ -281,6 +281,22 @@ footer a {
     color: #333; /* Neutral text color */
 }
 
+.large-image img {
+    width: 100%; /* Allow the image to fill its container */
+    max-width: 1600px; /* Set a larger maximum width */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the image */
+    border-radius: 8px; /* Optional: Rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Emphasized shadow */
+}
+
+.large-image .figure-caption {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.2rem; /* Slightly larger font size for caption */
+    color: #555; /* Neutral color for the caption text */
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     body {
